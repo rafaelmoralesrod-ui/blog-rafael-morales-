@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Un viaje al corazón de Europa: de ruta por Albania</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Un viaje al corazón de Europa: de ruta por Albania</title>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-    <header style="background: linear-gradient(135deg, #0077b6, #00b4d8); color: white; text-align:center; padding:2.5rem 1rem;">
-        <h1>Un viaje al corazón de Europa: de ruta por Albania</h1>
-    </header>
+  <div id="progress"></div>
 
-    <nav style="background:white; text-align:center; padding:0.8rem; box-shadow:0 2px 5px rgba(0,0,0,0.05);">
-        <a href="index.html" style="text-decoration:none; color:#0077b6; margin:0 1rem; font-weight:600;">Inicio</a>
-        <a href="about.html" style="text-decoration:none; color:#0077b6; margin:0 1rem; font-weight:600;">Sobre mí</a>
-    </nav>
+  <header>
+    <h1>Un viaje al corazón de Europa: de ruta por Albania</h1>
+  </header>
 
-    <main style="max-width:800px; margin:2rem auto; background:white; padding:2rem; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-        <p style="color:#999; font-size:0.9rem; margin-bottom:1.5rem;">30 de mayo de 2025</p>
-        <img src="img/post2.jpg" alt="Viaje a Albania" style="width:100%; border-radius:10px; margin-bottom:1rem;">
-        <p>Mi segundo viaje de 2025 fue radicalmente distinto al primero. En esta ocasión, pude conocer más una de las perlas más desconocidas de Europa: Albania. El país, cerrado al exterior hasta 1991, ha evolucionado y se ha expandido drásticamente durante los últimos años, siendo ahora uno de los países más turísticos de Europa. Totalmente entendible, debido a la gran simpatía de su gente y a sus playas interminables de arena fina.</p>
-    </main>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="about.html">Sobre mí</a>
+    <button id="theme-toggle" aria-label="Cambiar tema" title="Cambiar tema">🌙</button>
+  </nav>
 
-    <footer style="text-align:center; padding:2rem 1rem; background-color:#f0f4f8; color:#777; font-size:0.9rem; margin-top:3rem;">
-        © 2025 Blog de Viajes | Diseñado por Rafa Morales
-    </footer>
+  <main>
+    <article class="article-container">
+      <p class="fecha">30 de mayo de 2025</p>
+      <img src="img/post2.jpg" alt="Viaje a Albania"/>
+      <p>Mi segundo viaje de 2025 fue radicalmente distinto al primero. En esta ocasión, pude conocer más una de las perlas más desconocidas de Europa: Albania. El país, cerrado al exterior hasta 1991, ha evolucionado y se ha expandido drásticamente durante los últimos años, siendo ahora uno de los países más turísticos de Europa. Totalmente entendible, debido a la gran simpatía de su gente y a sus playas interminables de arena fina.</p>
+    </article>
+  </main>
+
+  <button id="backToTop" aria-label="Volver arriba" title="Volver arriba">↑</button>
+
+  <footer>© 2025 Blog de Viajes | Diseñado por Rafa Morales</footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
