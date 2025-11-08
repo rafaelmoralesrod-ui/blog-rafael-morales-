@@ -1,157 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog de Viajes 2025 - Rafa Morales</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* ---- Estilos base ---- */
-        body {
-            font-family: "Segoe UI", Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f9fc;
-            color: #333;
-        }
-
-        header {
-            background: linear-gradient(135deg, #0077b6, #00b4d8);
-            color: white;
-            text-align: center;
-            padding: 2.5rem 1rem;
-        }
-
-        header h1 {
-            font-size: 2.4rem;
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        nav {
-            background-color: white;
-            text-align: center;
-            padding: 0.8rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #0077b6;
-            margin: 0 1rem;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #0096c7;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
-        }
-
-        .post {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            margin-bottom: 2rem;
-            overflow: hidden;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .post:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        .post img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-        }
-
-        .post-content {
-            padding: 1.5rem;
-        }
-
-        .post h2 {
-            margin-top: 0;
-            color: #0077b6;
-        }
-
-        .post p {
-            line-height: 1.6;
-            color: #555;
-        }
-
-        .post .fecha {
-            color: #999;
-            font-size: 0.9rem;
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            background-color: #f0f4f8;
-            color: #777;
-            font-size: 0.9rem;
-            margin-top: 3rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog de Viajes 2025 - Rafa Morales</title>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
+  <header>
+    <h1>Blog de Viajes 2025</h1>
+    <p>Explorando el mundo paso a paso — por Rafa Morales</p>
+  </header>
 
-    <header>
-        <h1>Blog de Viajes 2025</h1>
-        <p>Explorando el mundo paso a paso — por Rafa Morales</p>
-    </header>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="about.html">Sobre mí</a>
+    <button id="theme-toggle" aria-label="Cambiar tema" title="Cambiar tema">🌙</button>
+  </nav>
 
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="about.html">Sobre mí</a>
-    </nav>
+  <!-- Buscador -->
+  <section class="search-wrap">
+    <input id="search" type="search" placeholder="Buscar entradas..." aria-label="Buscar entradas"/>
+  </section>
 
-    <main>
-        <section>
-            <div class="post">
-                <a href="post1.html"><img src="img/post1.jpg" alt="Suecia"></a>
-                <div class="post-content">
-                    <h2><a href="post1.html">Mi primer viaje en 2025: una experiencia glacial en Suecia</a></h2>
-                    <p class="fecha">30 de enero de 2025</p>
-                    <p>Una aventura inolvidable por los paisajes nórdicos de Suecia, donde descubrí fiordos, gastronomía local y un bar completamente de hielo. ❄️</p>
-                </div>
-            </div>
+  <main>
+    <section>
+      <div class="post">
+        <a href="post1.html"><img src="img/post1.jpg" alt="Suecia"></a>
+        <div class="post-content">
+          <h2><a href="post1.html">Mi primer viaje en 2025: una experiencia glacial en Suecia</a></h2>
+          <p class="fecha">30 de enero de 2025</p>
+          <p>Una aventura inolvidable por los paisajes nórdicos de Suecia, con fiordos, gastronomía local y un bar completamente de hielo. ❄️</p>
+        </div>
+      </div>
 
-            <div class="post">
-                <a href="post2.html"><img src="img/post2.jpg" alt="Albania"></a>
-                <div class="post-content">
-                    <h2><a href="post2.html">Un viaje al corazón de Europa: de ruta por Albania</a></h2>
-                    <p class="fecha">30 de mayo de 2025</p>
-                    <p>Desde playas de arena fina hasta la amabilidad de su gente, Albania me sorprendió como una joya aún poco descubierta del continente europeo. 🌍</p>
-                </div>
-            </div>
+      <div class="post">
+        <a href="post2.html"><img src="img/post2.jpg" alt="Albania"></a>
+        <div class="post-content">
+          <h2><a href="post2.html">Un viaje al corazón de Europa: de ruta por Albania</a></h2>
+          <p class="fecha">30 de mayo de 2025</p>
+          <p>Playas de arena fina y hospitalidad: Albania como joya por descubrir del continente europeo. 🌍</p>
+        </div>
+      </div>
 
-            <div class="post">
-                <a href="post3.html"><img src="img/post3.jpg" alt="Madrid"></a>
-                <div class="post-content">
-                    <h2><a href="post3.html">Cumpliendo sueños y rompiendo barreras: terminando la media maratón de Madrid</a></h2>
-                    <p class="fecha">30 de septiembre de 2025</p>
-                    <p>Una experiencia única corriendo mi primera media maratón en Madrid, culminando meses de esfuerzo y superación personal. 🏃‍♂️</p>
-                </div>
-            </div>
-        </section>
-    </main>
+      <div class="post">
+        <a href="post3.html"><img src="img/post3.jpg" alt="Madrid"></a>
+        <div class="post-content">
+          <h2><a href="post3.html">Cumpliendo sueños: terminando la media maratón de Madrid</a></h2>
+          <p class="fecha">30 de septiembre de 2025</p>
+          <p>Meses de preparación culminan en mi primera media maratón por el paisaje urbano de Madrid. 🏃‍♂️</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-        © 2025 Blog de Viajes | Diseñado por Rafa Morales
-    </footer>
+  <footer>© 2025 Blog de Viajes | Diseñado por Rafa Morales</footer>
 
+  <script src="js/main.js"></script>
 </body>
 </html>
+
