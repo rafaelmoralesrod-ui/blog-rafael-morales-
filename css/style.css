@@ -14,31 +14,20 @@ body {
   line-height: 1.6;
 }
 
-/* -------------------------------
-   CABECERA Y NAVEGACIÓN
---------------------------------*/
+/* CABECERA Y NAVEGACIÓN */
 header {
-  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  background: linear-gradient(135deg, #005b9a, #00a3d3);
   color: white;
   text-align: center;
   padding: 2.5rem 1rem;
+  position: relative;
 }
-
-/* mejora visibilidad de títulos sobre degradado */
 header h1 {
   font-size: 2.4rem;
   margin: 0 0 0.5rem 0;
-  color: #ffffff;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.35); /* añade contraste con fondo azul */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
 }
-
-header p {
-  font-size: 1.1rem;
-  opacity: 0.95;
-  margin: 0;
-  color: #f3f9ff;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.25);
-}
+header p { font-size: 1.1rem; opacity: 0.95; margin: 0; }
 
 nav {
   background-color: white;
@@ -46,7 +35,6 @@ nav {
   padding: 0.8rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
-
 nav a {
   text-decoration: none;
   color: #0077b6;
@@ -54,21 +42,25 @@ nav a {
   font-weight: 600;
   transition: color 0.3s ease;
 }
-
 nav a:hover { color: #0096c7; }
 
-/* -------------------------------
-   LAYOUT GENERAL
---------------------------------*/
-main {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1.5rem;
+#theme-toggle {
+  margin-left: 8px;
+  border: none;
+  background: #eaf6ff;
+  color: #0077b6;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: .35rem .6rem;
+  cursor: pointer;
+  transition: transform .15s ease, background .2s, color .2s;
 }
+#theme-toggle:hover { transform: translateY(-1px); background:#dff1ff; }
 
-/* -------------------------------
-   TARJETAS DE POST EN INDEX
---------------------------------*/
+/* LAYOUT GENERAL */
+main { max-width: 900px; margin: 2rem auto; padding: 0 1.5rem; }
+
+/* TARJETAS DE INDEX */
 .post {
   position: relative;
   background: white;
@@ -76,179 +68,105 @@ main {
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   margin-bottom: 2rem;
   overflow: hidden;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 .post::after {
   content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 12px;
+  position: absolute; inset: 0; border-radius: 12px;
   box-shadow: 0 0 0 0 rgba(0,150,199,0.25);
-  transition: box-shadow 0.25s ease;
-  pointer-events: none;
+  transition: box-shadow 0.25s ease; pointer-events: none;
 }
-
 .post:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(0,0,0,0.12);
 }
+.post:hover::after { box-shadow: 0 0 0 3px rgba(0,150,199,0.25); }
 
-.post:hover::after {
-  box-shadow: 0 0 0 3px rgba(0,150,199,0.25);
-}
-
-/* ---- Imágenes: encuadre ajustado ---- */
 .post img {
   width: 100%;
   height: 280px;
   object-fit: cover;
-  object-position: 50% 32%;   /* posición vertical un poco más baja: más cara visible */
+  object-position: 50% 28%; /* encuadre ligeramente hacia arriba */
   border-radius: 12px 12px 0 0;
   transition: transform 0.3s ease;
 }
+.post:hover img { transform: scale(1.02); }
 
-.post:hover img {
-  transform: scale(1.02);
-}
-
-.post-content {
-  padding: 1.5rem;
-}
-
-.post h2 {
-  margin: 0 0 .25rem 0;
-  color: #0a70a8;
-  line-height: 1.25;
-  transition: color 0.2s ease;
-}
-
-.post h2 a {
-  text-decoration: none;
-  color: inherit;
-}
-
+.post-content { padding: 1.5rem; }
+.post h2 { margin: 0 0 .25rem 0; color: #0a70a8; line-height: 1.25; transition: color 0.2s; }
+.post h2 a { text-decoration: none; color: inherit; }
 .post:hover h2 { color: #0077b6; }
-
 .post p { color: #555; }
+.post .fecha { color: #8a8a8a; font-size: 0.9rem; margin: 0 0 .75rem 0; }
 
-.post .fecha {
-  color: #8a8a8a;
-  font-size: 0.9rem;
-  margin: 0 0 .75rem 0;
+/* BUSCADOR */
+.search-wrap { max-width: 900px; margin: 1rem auto 0; padding: 0 1.5rem; }
+#search {
+  width: 100%; padding: .8rem 1rem;
+  border: 1px solid #cfe6f5; border-radius: 10px; font-size: 1rem; outline: none;
+  transition: box-shadow .2s ease, border-color .2s ease; background: #fff;
 }
+#search:focus { border-color:#79c5ea; box-shadow: 0 0 0 3px rgba(0,150,199,.15); }
 
-/* -------------------------------
-   POSTS INDIVIDUALES
---------------------------------*/
+/* POSTS INDIVIDUALES */
 .article-container {
   background: white;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   padding: 2rem;
 }
+.article-container img { width: 100%; border-radius: 12px; margin-bottom: 1rem; }
+.article-container h1 { color: #0077b6; margin-top: 0; }
+.article-container .fecha { color: #999; font-size: 0.9rem; margin-bottom: 1.5rem; }
 
-.article-container img {
-  width: 100%;
-  border-radius: 12px;
-  margin-bottom: 1rem;
+/* PROGRESO + VOLVER ARRIBA (posts) */
+#progress {
+  position: fixed; top: 0; left: 0; height: 4px; width: 0;
+  background: linear-gradient(90deg,#00b4d8,#0077b6);
+  z-index: 9999;
 }
-
-.article-container h1 {
-  color: #0077b6;
-  margin-top: 0;
+#backToTop {
+  position: fixed; right: 18px; bottom: 18px;
+  width: 42px; height: 42px; border-radius: 50%; border: none; cursor: pointer;
+  background: #0077b6; color: #fff; font-size: 18px; line-height: 42px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.2);
+  opacity: 0; pointer-events: none; transition: opacity .25s ease, transform .2s ease;
 }
+#backToTop:hover { transform: translateY(-2px); }
+#backToTop.show { opacity: 1; pointer-events: auto; }
 
-.article-container .fecha {
-  color: #999;
-  font-size: 0.9rem;
-  margin-bottom: 1.5rem;
+/* PÁGINA SOBRE MÍ */
+.card { background: #fff; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 2rem; }
+.intro { text-align: center; margin-bottom: 1.5rem; }
+.intro h2 { margin: 0 0 0.5rem 0; color: #0077b6; font-size: 1.9rem; }
+.intro p { margin: 0.25rem 0; color: #555; }
+.grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1.5rem; }
+@media (min-width: 760px) { .grid { grid-template-columns: 1.2fr 0.8fr; } }
+.section h3 { margin-top: 0; color: #0077b6; }
+.badge { display: inline-block; padding: 0.35rem 0.65rem; border-radius: 999px; background: #e8f6ff; color: #0077b6; font-weight: 600; font-size: 0.9rem; margin: 0.25rem 0.35rem 0 0; }
+.note { background: #f0f7ff; border-left: 4px solid #0096c7; padding: 1rem; border-radius: 8px; color: #345; margin-top: 1rem; }
+
+/* PIE */
+footer { text-align: center; padding: 2rem 1rem; background-color: #f0f4f8; color: #777; font-size: 0.9rem; margin-top: 3rem; }
+
+/* MODO OSCURO */
+body.dark { background-color: #0f1720; color: #e6eef5; }
+body.dark nav { background:#0b1118; box-shadow: 0 2px 6px rgba(0,0,0,.35); }
+body.dark nav a { color:#7ed3ff; }
+body.dark .post, body.dark .article-container, body.dark .card {
+  background: #111a22; color: #e6eef5; box-shadow: 0 2px 10px rgba(0,0,0,.35);
 }
+body.dark .post h2, body.dark .section h3, body.dark .intro h2 { color:#7ed3ff; }
+body.dark .post .fecha, body.dark .article-container .fecha { color:#a5b7c6; }
+body.dark footer { background:#0b1118; color:#bcd1df; }
+body.dark #search { background:#0b1118; color:#e6eef5; border-color:#1f2a33; }
+body.dark #theme-toggle { background:#123042; color:#c7ecff; }
 
-/* -------------------------------
-   PÁGINA "SOBRE MÍ"
---------------------------------*/
-.card {
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  padding: 2rem;
-}
-
-.intro {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-.intro h2 {
-  margin: 0 0 0.5rem 0;
-  color: #0077b6;
-  font-size: 1.9rem;
-}
-
-.intro p {
-  margin: 0.25rem 0;
-  color: #555;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-@media (min-width: 760px) {
-  .grid { grid-template-columns: 1.2fr 0.8fr; }
-}
-
-.section h3 {
-  margin-top: 0;
-  color: #0077b6;
-}
-
-.badge {
-  display: inline-block;
-  padding: 0.35rem 0.65rem;
-  border-radius: 999px;
-  background: #e8f6ff;
-  color: #0077b6;
-  font-weight: 600;
-  font-size: 0.9rem;
-  margin: 0.25rem 0.35rem 0 0;
-}
-
-.note {
-  background: #f0f7ff;
-  border-left: 4px solid #0096c7;
-  padding: 1rem;
-  border-radius: 8px;
-  color: #345;
-  margin-top: 1rem;
-}
-
-/* -------------------------------
-   PIE DE PÁGINA
---------------------------------*/
-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  background-color: #f0f4f8;
-  color: #777;
-  font-size: 0.9rem;
-  margin-top: 3rem;
-}
-
-/* -------------------------------
-   RESPONSIVE (MÓVIL)
---------------------------------*/
+/* RESPONSIVE */
 @media (max-width: 600px) {
   header h1 { font-size: 1.8rem; }
   .post-content { padding: 1rem; }
   main { padding: 0 1rem; }
-
-  .post img {
-    height: 220px;
-    object-position: 50% 38%;
-  }
+  .post img { height: 220px; object-position: 50% 35%; }
 }
+
