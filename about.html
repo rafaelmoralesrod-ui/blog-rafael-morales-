@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre mí - Rafa Morales</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Estilo coherente con index y posts */
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f9fc;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0077b6, #00b4d8);
+      color: white;
+      text-align: center;
+      padding: 2.5rem 1rem;
+    }
+
+    nav {
+      background-color: white;
+      text-align: center;
+      padding: 0.8rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0077b6;
+      margin: 0 1rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover { color: #0096c7; }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      padding: 2rem;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .intro h2 {
+      margin: 0 0 0.5rem 0;
+      color: #0077b6;
+      font-size: 1.9rem;
+    }
+    .intro p {
+      margin: 0.25rem 0;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    @media (min-width: 760px) {
+      .grid { grid-template-columns: 1.2fr 0.8fr; }
+    }
+
+    .section h3 {
+      margin-top: 0;
+      color: #0077b6;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      background: #e8f6ff;
+      color: #0077b6;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin: 0.25rem 0.35rem 0 0;
+    }
+
+    .note {
+      background: #f0f7ff;
+      border-left: 4px solid #0096c7;
+      padding: 1rem;
+      border-radius: 8px;
+      color: #345;
+      margin-top: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #f0f4f8;
+      color: #777;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sobre mí</h1>
+    <p>Estudiante de Ingeniería Informática · UNIR · Blog de Viajes 2025</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="about.html">Sobre mí</a>
+  </nav>
+
+  <main>
+    <section class="card">
+      <div class="intro">
+        <h2>Hola, soy Rafa Morales</h2>
+        <p>Soy un estudiante de Ingeniería Informática de la UNIR, y con este blog tengo el propósito de obtener la máxima puntuación en la Actividad 1 de la asignatura <em>Desarrollo de Aplicaciones en Red</em>.</p>
+        <p>El blog irá dedicado a explicar mi experiencia de viajes en 2025.</p>
+      </div>
+
+      <div class="grid">
+        <div class="section">
+          <h3>Qué encontrarás en este blog</h3>
+          <p>Relatos cortos y visuales de mis viajes, con fechas, fotos y aprendizajes personales. Intento mantener un estilo claro y directo, centrado en la experiencia.</p>
+          <div class="note">
+            Consejo: usa el menú superior o vuelve a la página de inicio para ver todas las entradas publicadas.
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>Etiquetas del blog</h3>
+          <span class="badge">Viajes</span>
+          <span class="badge">Europa</span>
+          <span class="badge">Aprendizajes</span>
+          <span class="badge">2025</span>
+          <span class="badge">Running</span>
+          <span class="badge">Cultura</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Blog de Viajes | Diseñado por Rafa Morales
+  </footer>
+</body>
+</html>
