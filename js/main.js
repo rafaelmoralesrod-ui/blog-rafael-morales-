@@ -1,4 +1,4 @@
-/* main.js — mejoras de UX para el blog */
+/* main.js — mejoras de UX para el blog de Rafa */
 
 // ---------- 1) Modo oscuro con persistencia ----------
 (function themeSetup() {
@@ -86,4 +86,5 @@
     });
   }
 })();
+
 
